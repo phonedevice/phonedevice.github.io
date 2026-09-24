@@ -1,0 +1,12 @@
+{
+  "name": "Mobile Device Test",
+  "short_name": "DeviceTest",
+  "description": "Free browser-based phone and computer hardware diagnostic tool.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

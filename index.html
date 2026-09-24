@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Mobile Device Test — Free Browser-Based Phone Diagnostic Tool</title>
+<meta name="description" content="Test your phone or computer instantly in the browser. Check screen, battery, GPU, network, touch, sensors, storage, camera and microphone — no app install, no data uploaded.">
+<meta name="keywords" content="device test, phone diagnostic, mobile device test, browser test, screen test, battery test, touch test, sensor test, hardware detection">
+<meta name="author" content="Mobile Device Test">
+<link rel="canonical" href="https://www.mobiledevicetest.example/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2563eb">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mobile Device Test">
+<meta property="og:title" content="Mobile Device Test — Free Browser-Based Phone Diagnostic Tool">
+<meta property="og:description" content="Run a full hardware and sensor check on any phone or computer, right in your browser. Free, private, no install required.">
+<meta property="og:url" content="https://www.mobiledevicetest.example/">
+<meta property="og:image" content="https://www.mobiledevicetest.example/assets/og-cover.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mobile Device Test — Free Browser-Based Phone Diagnostic Tool">
+<meta name="twitter:description" content="Check your screen, battery, sensors, camera, network and more — instantly, in your browser.">
+<meta name="twitter:image" content="https://www.mobiledevicetest.example/assets/og-cover.png">
+
+<!-- Icons / manifest -->
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Structured data: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Mobile Device Test",
+  "url": "https://www.mobiledevicetest.example/",
+  "description": "A free browser-based diagnostic tool that detects and tests phone and computer hardware: screen, battery, GPU, network, touch, sensors, storage, camera and microphone.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in any modern web browser)",
+  "browserRequirements": "Requires JavaScript. Works best on Chrome, Safari, Edge and Firefox.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Browser and OS detection",
+    "Screen and display diagnostics",
+    "CPU and memory reporting",
+    "GPU and graphics detection",
+    "Network and connection speed",
+    "Battery status",
+    "Touch and pointer input test",
+    "Motion and orientation sensor test",
+    "Storage quota check",
+    "Camera and microphone detection",
+    "Web Audio engine test",
+    "Location and timezone detection"
+  ]
+}
+</script>
+
+<!-- Structured data: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mobiledevicetest.example/" }
+  ]
+}
+</script>
+
+<!-- Structured data: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Mobile Device Test free to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every diagnostic tool on this site is free, runs entirely in your browser, and requires no account or app install." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this app collect or upload my device data?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. All detection runs locally using standard browser APIs. Nothing about your device or its readings is sent to a server or stored outside your session." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which phones and browsers are supported?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The site works on any modern browser, including iOS Safari, Android Chrome, and desktop Chrome, Edge, and Firefox. Some checks, such as the Battery Status API, are only available in Chromium-based browsers." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some tools ask me to tap a button instead of running automatically?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Checks like motion sensors, battery status and location require a user gesture or a permission prompt from the browser, so those tools wait for you to tap Run Check first." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header" id="header-root"></header>
+
+<main id="main">
+  <div class="container">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="overview" aria-labelledby="device-title">
+      <div class="hero__grid">
+        <div>
+          <div class="hero__badges">
+            <span class="badge badge--live"><span class="badge__dot"></span>Live Hardware Telemetry</span>
+            <span class="badge badge--neutral">100% Client-Side</span>
+            <span class="badge badge--neutral">No Install Required</span>
+          </div>
+
+          <h1 class="hero__title" id="device-title">Detecting your device…</h1>
+          <p class="hero__subtitle" id="device-subtitle">Reading browser, screen and hardware information from your current session.</p>
+
+          <div class="spec-grid">
+            <div class="spec-chip">
+              <span class="spec-chip__label">OS &amp; Browser</span>
+              <span class="spec-chip__value" id="spec-os">Detecting…</span>
+              <span class="spec-chip__hint" id="spec-os-hint">&nbsp;</span>
+            </div>
+            <div class="spec-chip">
+              <span class="spec-chip__label">Screen</span>
+              <span class="spec-chip__value" id="spec-screen">Detecting…</span>
+              <span class="spec-chip__hint" id="spec-screen-hint">&nbsp;</span>
+            </div>
+            <div class="spec-chip">
+              <span class="spec-chip__label">Network</span>
+              <span class="spec-chip__value" id="spec-network">Detecting…</span>
+              <span class="spec-chip__hint" id="spec-network-hint">&nbsp;</span>
+            </div>
+            <div class="spec-chip">
+              <span class="spec-chip__label">Hardware</span>
+              <span class="spec-chip__value" id="spec-hardware">Detecting…</span>
+              <span class="spec-chip__hint" id="spec-hardware-hint">&nbsp;</span>
+            </div>
+          </div>
+
+          <div class="hero__actions">
+            <button type="button" class="btn btn--primary" id="run-full-scan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M20 8V5a1 1 0 0 0-1-1h-3M4 16v3a1 1 0 0 0 1 1h3M20 16v3a1 1 0 0 1-1 1h-3M4 12h16"/></svg>
+              Run Full Device Scan
+            </button>
+            <a class="btn btn--secondary" href="#how-it-works">How it works</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="phone-visual" role="img" aria-label="Illustration of a phone running diagnostics">
+            <div class="phone-visual__notch">
+              <span></span>
+              <span class="phone-visual__notch-label">DIAG RUN</span>
+              <span></span>
+            </div>
+            <div class="phone-visual__body">
+              <div class="phone-visual__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <div class="phone-visual__headline">12 Suites Loaded</div>
+              <div class="phone-visual__note">Running locally in your browser</div>
+              <div class="phone-visual__status"><span></span>No data leaves this page</div>
+            </div>
+            <div class="phone-visual__bar"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SUMMARY PANEL ===================== -->
+    <section class="summary-panel" aria-labelledby="summary-title">
+      <div class="summary-panel__top">
+        <div>
+          <div class="summary-panel__title" id="summary-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>
+            Overall Detection Summary
+            <span class="summary-chip" id="summary-chip">0% Optimal</span>
+          </div>
+          <p class="summary-panel__note" id="summary-note">Running automatic checks…</p>
+        </div>
+        <div class="summary-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="diagnostic-search" placeholder="Search tools (e.g. battery, GPU, touch)…" aria-label="Search detection tools">
+        </div>
+      </div>
+
+      <div class="health-bar" role="img" aria-label="Overall device health bar">
+        <div class="health-bar__seg--pass" id="health-seg-pass" style="width:0%"></div>
+        <div class="health-bar__seg--warn" id="health-seg-warn" style="width:0%"></div>
+        <div class="health-bar__seg--rest" id="health-seg-rest" style="width:100%"></div>
+      </div>
+      <div class="health-legend">
+        <span><i style="background:var(--color-pass)"></i>Passed</span>
+        <span><i style="background:var(--color-warn)"></i>Needs attention</span>
+        <span><i style="background:var(--border-input)"></i>Not run yet</span>
+      </div>
+    </section>
+
+    <!-- ===================== TOOLS GRID ===================== -->
+    <section class="section" id="detection-tools" aria-labelledby="tools-title">
+      <div class="section__head">
+        <div>
+          <div class="section__eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>
+            12 Diagnostic Suites
+          </div>
+          <h2 class="section__title" id="tools-title">Detection Tools</h2>
+          <p class="section__desc">Every card below reads live information from your browser. Tools marked <strong>Run Check</strong> need a tap because they require a permission prompt or a user gesture.</p>
+        </div>
+      </div>
+      <div class="tools-grid" id="tools-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="section" id="how-it-works" aria-labelledby="how-title">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title" id="how-title">How It Works</h2>
+          <p class="section__desc">Mobile Device Test doesn't inspect your phone remotely — it reads the same information your browser already exposes to every website you visit, and displays it back to you in one readable place.</p>
+        </div>
+      </div>
+      <div class="tools-grid" style="margin-top:var(--space-lg)">
+        <article class="tool-card">
+          <div class="tool-card__top"><span class="tool-card__icon">1</span></div>
+          <h3 class="tool-card__title">Open this page</h3>
+          <p class="tool-card__desc">Standard browser APIs — like navigator, screen and WebGL — start reporting your device's basic specs immediately.</p>
+        </article>
+        <article class="tool-card">
+          <div class="tool-card__top"><span class="tool-card__icon">2</span></div>
+          <h3 class="tool-card__title">Run a check</h3>
+          <p class="tool-card__desc">Tap a tool card to run its test. Some, like touch or GPU, run instantly. Others, like sensors, ask your permission first.</p>
+        </article>
+        <article class="tool-card">
+          <div class="tool-card__top"><span class="tool-card__icon">3</span></div>
+          <h3 class="tool-card__title">Read the results</h3>
+          <p class="tool-card__desc">Each card shows a pass, attention, or unsupported status plus the raw values it detected — nothing is sent off your device.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title" id="faq-title">Frequently Asked Questions</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is Mobile Device Test free to use?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__body">Yes. Every diagnostic tool on this site is free, runs entirely in your browser, and requires no account or app install.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Does this app collect or upload my device data?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__body">No. All detection runs locally using standard browser APIs. Nothing about your device or its readings is sent to a server or stored outside your session.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which phones and browsers are supported?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__body">The site works on any modern browser, including iOS Safari, Android Chrome, and desktop Chrome, Edge, and Firefox. Some checks, such as the Battery Status API, are only available in Chromium-based browsers.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Why do some tools ask me to tap a button instead of running automatically?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-item__body">Checks like motion sensors, battery status and location require a user gesture or a permission prompt from the browser, so those tools wait for you to tap Run Check first.</div>
+        </details>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer" id="footer-root"></footer>
+
+<script>document.documentElement.classList.remove("no-js");</script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
